@@ -1,14 +1,14 @@
 import { useState, useEffect} from "react"
-import { Container, Row, Col, Nav } from "react-bootstrap";
-
+import { Nav } from "react-bootstrap";
+import corey from  '../assets/img/corey.jpeg'
 
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0)
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["Front End Developer"];
+    const toRotate = ["Full-Stack Web Developer"];
     const [text, setText] = useState('');
-    const [delta, setDelta] = useState(300-Math.random()*100)
+    const [delta, setDelta] = useState(300 - Math.random()*100)
     const period = 2000;
 
     useEffect(() => {
@@ -35,7 +35,7 @@ export const Banner = () => {
         }else if(isDeleting && updatedText===''){
             setIsDeleting(false);
             setLoopNum(loopNum+1);
-            setDelta(500);
+            setDelta(300);
         }
     }
     const [activeLink, setActiveLink] = useState('home');
@@ -43,21 +43,30 @@ export const Banner = () => {
         setActiveLink(value);
     }
     return (
-        <section className="banner" id="home">
-            <Container>
-                <Row className="align-items-center">
-                    <Col xs={12} md={6} xl={7}>
-                        <span className="tagline">Welcome to my Portfolio</span>
-                        <h1>{`Hi I'm Corey`}</h1>
-                        <h3 className="wrap">{text}</h3>
-                        <p>I am a Jr. Front End Developer, primarily focusing on React, JavaScript,CSS, and HTML. I am looking to bring my creativity to life and for new opportunities to learn, grow and contribute to a company long-term. I am currently pursuing a degree in Computer Science and looking for On-site or Remote work. I am open to relocating.
+        <section data-aos="fade-up" className="banner" id="home">
+            <div className="banner-inner-container">
+                <div className="banner-header">
+                    <h1 className="tagline">Welcome to my Portfolio</h1>
+                </div>
+                <div className="banner-body">
+                    <div className="header-body" data-aos="fade-right">
+                        <div className="banner-text-container" xs={12} md={6} xl={7}>
+                            <h2>{'{ Hi I am Corey, }'}</h2>
+                            <div className="banner-deleting-words">
+                                <h1 className="wrap">{text}</h1>
+                            </div>
+                            <p>I am a Full-Stack Web Developer with a passion for creating clean responsive code. I enjoy collaborating with other eager developers, and I love learning new concepts. I am looking for a company to grow long term with, and show what I can bring to the table.
 
-                        </p>
-                         <Nav.Link href = "#contact" className="button" onClick={() => onUpdateActiveLink('contact')}><span>Let's Connect!</span></Nav.Link>
-                    </Col> 
-                    
-                </Row>
-            </Container>
+                            </p>
+                            <Nav.Link href = "#contact" className="button" onClick={() => onUpdateActiveLink('contact')}><span>Let's Connect!</span></Nav.Link>
+                        </div>
+                    </div>
+                    <div className="header-body-img">
+                        <img src={corey} alt="logo"/>
+                    </div>
+                </div>
+
+            </div>
         </section>
     )
 }
