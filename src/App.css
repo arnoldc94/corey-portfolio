@@ -219,7 +219,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .banner-inner-container{
   margin: 0 5rem 0 5rem;
-  padding: 1.5rem;
+  padding: 1.4rem;
   height: 80vh;
   background-color: #395B64;
   position: relative;
@@ -234,6 +234,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: 0;
   border-top: 38.2rem solid #A5C9CA;
   border-right: 50rem solid #c7ebf2;
+  height:80vh;
 }
 
 .banner-text-container {
@@ -308,7 +309,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   z-index: 1;
   margin: 0 5rem 0 5rem;
-  padding: 1.5rem;
+  padding: 1.4rem;
   border: .2px solid #121212;
 }
 
@@ -318,9 +319,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: absolute;
   top: 0;
   right: 0;
-  border-top: 38.2rem solid #c7ebf2;
+  border-top: 30rem solid #c7ebf2;
   border-right: 50rem solid #A5C9CA;
   z-index: -1;
+  height: 80vh;
 }
 
 .about-header h1 {
