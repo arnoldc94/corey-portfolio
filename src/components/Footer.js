@@ -1,7 +1,21 @@
-import github from  '../assets/img/github.svg'
-import linkedin from  '../assets/img/linkedin.svg'
 import { MdEmail } from 'react-icons/md';
 import { HiCode } from 'react-icons/hi';
+import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai'
+
+  let icons = [
+    {
+      name: HiCode ,
+      link: "https://github.com/arnoldc94/corey-portfolio"
+    },
+    {
+      name: AiFillGithub ,
+      link: "https://github.com/arnoldc94"
+    },
+    {
+      name: AiFillLinkedin ,
+      link: "https://www.linkedin.com/in/corey-arnold-744391207/"
+    }
+  ]
 
 const Mailto = ({ email, subject = '', body = '', children }) => {
   let params = subject || body ? '?' : '';
@@ -17,9 +31,11 @@ export const Footer = () => {
     <div className = "footer">
       <div className="footer-links">
         <Mailto email="carnold9438@gmail.com" subject="Contacting from your portfolio " body="Hey Corey, "><i><MdEmail /></i></Mailto>
-        <a href="https://github.com/arnoldc94" ><img src={github} alt=""/></a>
-        <a href="https://www.linkedin.com/in/corey-arnold-744391207/" ><img src={linkedin} alt=""/></a>
-        <a href="https://github.com/arnoldc94/corey-portfolio" ><i><HiCode /></i></a>
+        {icons.map(icon =>{
+          return (
+            <a href={icon.link}><i><AiFillGithub />{icon.name}</i></a>
+          )
+        })}
       </div>
       <div className="copy">
         <p>&copy; Corey Arnold 2022</p>

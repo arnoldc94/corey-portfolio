@@ -29,6 +29,8 @@ export const Contact = () => {
                 console.log('FAILED...', err);
             });
         };
+
+        
     return(
         <section data-aos="fade-up"  className="contact" id="contact">
            

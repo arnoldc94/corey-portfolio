@@ -4,17 +4,7 @@ import vidtwo from '../assets/video/vidtwo.gif'
 import vidthree from '../assets/video/vidthree.gif'
 import vidfive from '../assets/video/vidfive.gif'
 import vidsix from '../assets/video/vidsix.gif'
-import 'react-multi-carousel/lib/styles.css';
-
-const responsive = {
-    
-    view: {
-      breakpoint: { max: 4000, min: 0 },
-      items: 3
-    }
-  };
-
-  
+import 'react-multi-carousel/lib/styles.css'; 
   
   export const Projects = () => {
   
