@@ -223,18 +223,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     display: flex;
     align-items: center;
     flex-direction: column;
-    
+    overflow: hidden;
   }
     .banner-inner-container{
       margin: 0 5rem 0 5rem;
       padding: 1.4rem;
-      height: 80vh;
+      height: 85vh;
       width:90vw;
       background-color: #395B64;
       position: relative;
       font-size: 1.2rem;
       border: .2px solid #121212;
-      overflow-x: hidden;
     }
     
     .banner-inner-container:before {
@@ -244,11 +243,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
       right: 0;
       border-top: 35rem solid #A5C9CA;
       border-right: 70rem solid #c7ebf2;
-      height:80vh;
+      height:inherit;
     }
     
     .banner-text-container {
-      width: 30rem;
+      width: 40rem;
+      text-align: center;
     }
     
     .banner-text-container p{
@@ -321,7 +321,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   .banner-text-container {
     width: 80vw;
-    text-align:left;
   }
 
   .banner-text-container p{
@@ -354,6 +353,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
+@media(min-width:500px){
+  .banner-text-container p{
+    font-size: 1.2rem;
+  }
+}
+
 
 
 
@@ -365,17 +370,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 @media (max-width:2400px){
 
   .about {
-    height: fit-content;
     width: 100vw;
-    margin-top: 5rem;
-    margin-bottom:5rem;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-top: 13.75rem;
+    padding-bottom:13.75rem;
   }
   
   .inner-about-container {
-    height: 80vh;
+    height:43.75rem;
     width:90vw;
     background-color: #395B64;
     margin:5rem auto 5rem auto;
@@ -397,7 +401,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     border-top: 35rem solid #c7ebf2;
     border-right: 70rem solid #A5C9CA;
     z-index: -1;
-    height: 80vh;
+    height:inherit;
   }
   
   .about-header h1 {
@@ -423,10 +427,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   
   .about-section p {
-    line-height: 2rem;
+    line-height: 6.5vh;
     margin: 0 auto 0 auto;
     font-weight: 300;
-    width:50vw;
+    width:60vw;
   }
   
   .skills {
@@ -443,11 +447,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
+
+
 @media(max-width:1240px)
 {
   .about {
-    margin-bottom: 10rem;
-    
+    margin-bottom: 5rem;
   }
   .inner-about-container {
     height:fit-content;
@@ -467,9 +472,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     font-weight: 500;
     line-height: 2rem;
     text-align: center;
-    width:80vw;
   }
 }
+
+@media(min-width:650px){
+  @media(max-width:1240px){
+    .about-body p{
+      width:70vw;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
 
 
 
@@ -684,7 +699,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .contact-inner-container {
-  height:100vh;
+  height:inherit;
 }
 
 .header-container h1 {
@@ -752,6 +767,40 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #121212;
   text-align: center;
   padding-bottom: 3rem;
+}
+
+#success{
+  text-align: center;
+  border: 1px solid #c7ebf2;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  height:7vh;
+  padding: .5rem;
+}
+
+
+#fail{
+  text-align: center;
+  border: 1px solid red;
+  text-align: center;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  height:10vh;
+  padding: .5rem;
+}
+
+#failed{
+  text-align: center;
+  border: 1px solid red;
+  text-align: center;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  height:10vh;
+  padding: .5rem;
+}
+
+.hide{
+  display: none;
 }
 
 @media(max-width:1240px){
